@@ -23,7 +23,7 @@ if (!empty($_GET['email'])) {
     fclose($fh);
 
     //Get the http URI to the image
-    $graphic_http = 'http://localhost/php-track-email/blank.gif';
+    $graphic_http = 'https://trackmails.herokuapp.com/blank.gif';
 
     //Get the filesize of the image for headers
     $filesize = filesize('blank.gif');

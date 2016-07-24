@@ -12,7 +12,7 @@ if (isset($_POST['mailto'])) {
         $id = rand(111, 999);
         $id.=rand(111, 999);
         $body = "This is the fixed message of test email to get notify when it is read.....";
-        $body .= "<img border='0' src='http://192.168.0.12/php-track-email/trackonline.php?email=$to&id=$id&subject=$subject' width='1' height='1' alt='image for email' >";
+        $body .= "<img border='0' src='https://trackmails.herokuapp.com/trackonline.php?email=$to&id=$id&subject=$subject' width='1' height='1' alt='image for email' >";
         $mail->IsSMTP();                           // tell the class to use SMTP
         $mail->SMTPAuth = true;                  // enable SMTP authentication
         $mail->Port = 25;                    // set the SMTP server port
@@ -44,7 +44,7 @@ if (!empty($_POST['id'])) {
     $id = $_POST['id'];
     $to = $_POST['email'];
     $checkid = "Id:" . $id;
-    $fh = fopen("http://localhost/php-track-email/email.txt", "r");
+    $fh = fopen("https://trackmails.herokuapp.com/email.txt", "r");
     $read = false; // init as false
     while (($buffer = fgets($fh)) !== false) {
         if (strpos($buffer, $checkid) !== false) {
