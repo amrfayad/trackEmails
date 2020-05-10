@@ -1,2 +1,2 @@
 # trackEmails
-Thsis Project to track emails
+This Project to track emails
